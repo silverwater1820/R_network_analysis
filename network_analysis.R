@@ -5,11 +5,12 @@ setwd("C:/.1.EWHA WOMAS UNIVERSITY/4-3/캡스톤/riss_data")
 #install.packages("pacman")
 pacman::p_load('tidymodels','tidytext','NLP4kec' ,'stringr','magrittr','tm', 'network','GGally', 'sna', 'RColorBrewer')
 
-riss_geder_conflict_title <- read.csv('gender_conflict_title.csv')
-RGCT_txt <- as.data.frame(riss_geder_conflict_title, stringsAsFactors = F)
+#riss_geder_conflict_title <- read.csv('gender_conflict_title.csv')
+#RGCT_txt <- as.data.frame(riss_geder_conflict_title, stringsAsFactors = F)
 
 # 텍스트의 중복된 행 제거
 RGCT_txt <- unique(RGCT_txt)
+
 
 # 텍스트의 공백을 제거. NLP4kec 형태소 분석기가 띄어쓰기를 구분
 RGCT_txt <- sapply(RGCT_txt,str_remove_all,'\\s+')
