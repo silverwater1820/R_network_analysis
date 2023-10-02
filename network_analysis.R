@@ -11,6 +11,7 @@ RGCT_txt <- as.data.frame(riss_geder_conflict_title, stringsAsFactors = F)
 # 텍스트의 중복된 행 제거
 RGCT_txt <- unique(RGCT_txt)
 
+
 # 텍스트의 공백을 제거. NLP4kec 형태소 분석기가 띄어쓰기를 구분
 RGCT_txt <- sapply(RGCT_txt,str_remove_all,'\\s+')
 RGCT_txt <- as.data.frame(RGCT_txt,stringsAsFactors = FALSE)
