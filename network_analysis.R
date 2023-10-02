@@ -5,8 +5,8 @@ setwd("C:/.1.EWHA WOMAS UNIVERSITY/4-3/캡스톤/riss_data")
 #install.packages("pacman")
 pacman::p_load('tidymodels','tidytext','NLP4kec' ,'stringr','magrittr','tm', 'network','GGally', 'sna', 'RColorBrewer')
 
-riss_geder_conflict_title <- read.csv('gender_conflict_title.csv')
-RGCT_txt <- as.data.frame(riss_geder_conflict_title, stringsAsFactors = F)
+#riss_geder_conflict_title <- read.csv('gender_conflict_title.csv')
+#RGCT_txt <- as.data.frame(riss_geder_conflict_title, stringsAsFactors = F)
 
 # 텍스트의 중복된 행 제거
 RGCT_txt <- unique(RGCT_txt)
